@@ -4,7 +4,11 @@ var threeItems = [1,2,3];
 
   //code here
 
+var last = function(arr) {
+    console.log(arr[arr.length - 1]);
+};
 
+last(threeItems);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -15,6 +19,16 @@ var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
   //code here
 
+var oddRemv = function(evnArr) {
+    for(var i = evnArr.length - 1; i >= 0; i--) {
+        if(evnArr[i] % 2 != 0 || evnArr[i] === 3) {
+            evnArr.splice(i, 1);
+        }
+    }
+    console.log(evnArr);
+};
+
+oddRemv(evenArray);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -28,6 +42,18 @@ var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
   //code here
 
+var randChecker = function(rand, arr) {
+    console.log(rand);
+    for(var i = 0; i < arr.length - 1; i++) {
+        if(arr[i] === rand) {
+            return true;
+        }
+        }
+        return false;
+    };
+
+
+console.log(randChecker(getRandomArbitrary(), randomArray));
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -39,8 +65,11 @@ var second;
 
   //code here
 
-alert(first) //[1,2,3,4,5];
-alert(second) //[1,2,3,4,5,6,7];
+second = first.slice(0);
+second.push(6, 7);
+
+console.log(first) //[1,2,3,4,5];
+console.log(second) //[1,2,3,4,5,6,7];
 
 
 

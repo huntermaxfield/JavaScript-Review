@@ -82,22 +82,50 @@ var sentence = "Dev Mountain is the best"
 
   //code here
 
+var longest = function(sen) {
+    sen = sen.split(' ');
+    var long = sen[0];
+    for (var i = 0; i < sen.length; i++) {
+        //console.log(sen[i].length);
+        if(sen[i].length > long.length) {
+            long = sen[i];
+        }
+    }
+    return long;
+}
 
+console.log(longest(sentence));
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
 
 //write a function called capitalize that takes in the myPoem variable and capitalizes every word 
-var myPoem = 'What is a jQuery but a misunderstood object?'
+var myPoem = 'What is a jQuery but a misunderstood object?';
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
   //code here
 
+function capitalize(sent) {
+    return sent.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+}
 
-
+console.log(capitalize(myPoem));
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
-
+var theOdd = "aaa bbb eee uuu";
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
+function vowelCounter(str) {
+    vowels = ['a','e','i','o','u'];
+    counter = 0;
+    for(var i = 0; i < vowels.length; i++) {
+        for(var j = 0; j < str.length; j++) {
+            if(str[j] === vowels[i]) {
+                counter++;
+            }
+        }
+        }
+        console.log(counter);
+}
+
+vowelCounter(theOdyssey);

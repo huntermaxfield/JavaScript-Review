@@ -107,20 +107,16 @@ methodCollection.alertHello();
 function voweler(str) {
     var counter = 0;
     vowels = ['a','e','i','o','u'];
-    newObject = {
-
-    };
+    newObject = {};
     for(var i = 0; i < vowels.length; i++) {
         for(var j = 0; j < str.length; j++) {
             if(str[j] === vowels[i]) {
                 counter++;
             }
         }
-        console.log(vowels[i], counter)
         newObject[vowels[i]] = counter;
         counter = 0;
     }
     return newObject;
 }
-
 voweler("This is a test");
